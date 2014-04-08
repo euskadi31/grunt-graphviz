@@ -2,6 +2,17 @@
 
 > Compile DOT files
 
+## Dependencies
+
+* Graphviz
+
+### Install
+
+Linux Gentoo
+```shell
+emerge -av media-gfx/graphviz
+```
+
 ## Getting Started
 This plugin requires Grunt `~0.4.1`
 
