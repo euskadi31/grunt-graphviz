@@ -41,7 +41,7 @@ module.exports = function(grunt) {
                 } else {
                     grunt.log.writeln("Compiling " + (src).cyan + ' -> ' + (dest).cyan);
                 }
-                
+
                 next();
             }
 
@@ -57,6 +57,7 @@ module.exports = function(grunt) {
                 }
 
                 next();
+
             } else {
 
                 if (dest !== src && grunt.file.exists(dest)) {
@@ -66,20 +67,17 @@ module.exports = function(grunt) {
                 cp = grunt.util.spawn({
                     cmd: 'dot',
                     args: [
-                        '-T' + format, 
-                        src, 
-                        '-o', 
+                        '-T' + format,
+                        src,
+                        '-o',
                         dest
-                    ]
+                    ],
+                    opts: {
+                        stdio: 'inherit'
+                    }
                 }, processed);
-
-                if (cp && grunt.option('verbose')) {
-                    cp.stdout.pipe(process.stdout);
-                    cp.stderr.pipe(process.stderr);
-                }
-
             }
-            
+
         }
 
     });

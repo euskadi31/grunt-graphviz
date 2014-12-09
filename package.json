@@ -39,9 +39,9 @@
   },
   "keywords": [
     "gruntplugin",
-    "dot", 
-    "graphviz", 
-    "graph", 
+    "dot",
+    "graphviz",
+    "graph",
     "visualization"
   ]
 }
