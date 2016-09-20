@@ -24,7 +24,7 @@ module.exports = function(grunt) {
     graphviz: {
       schema: {
         files: {
-          './test/schema.png': './test/schema.dot'
+          './test/schema.svg': './test/schema.dot'
         }
       }
     }
